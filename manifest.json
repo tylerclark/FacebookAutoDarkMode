@@ -1,0 +1,14 @@
+{
+	"name": "Facebook Auto Dark Mode",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"description": "Automatically triggers Facebook dark mode based on system/OS preference",
+	"content_scripts": [
+		{
+			"matches": ["https://*.facebook.com/*"],
+			"js": ["content.js"],
+			"run_at": "document_end"
+		}
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
